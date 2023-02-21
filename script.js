@@ -20,7 +20,7 @@ function addBrackets() {
         t = e.selectionStart,
         r = e.selectionEnd,
         a = e.value;
-    e.value = a.substring(0, t) + " []" + a.substring(r), e.selectionStart = t + 2, e.selectionEnd = t + 2, e.focus()
+    e.value = a.substring(0, t) + "[]" + a.substring(r), e.selectionStart = t + 1, e.selectionEnd = t + 1, e.focus()
 }
 
 
