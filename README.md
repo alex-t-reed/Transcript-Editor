@@ -1,6 +1,6 @@
 # Transcript Editor
 
-[Transcript Editor](https://alex-t-reed.github.io/transcripteditor)
+[Transcript Editor](https://alex-t-reed.github.io/Transcript-Editor)
 
 This is a transcript editor I used to make transcripts for participants as a research assistant.
 
