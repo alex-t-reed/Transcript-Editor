@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transcript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Transcript Editor</h1>
+    <audio id="audioPlayer" controls>
+        <source src="" type="audio/m4a">
+        Your browser does not support the audio element.
+    </audio>
+    <div>
+        <label for="audioFile">Select audio file:</label>
+        <input type="file" id="audioFile">
+    </div>
+    <div>
+        <button id="playBtn">Play</button>
+        <button id="pauseBtn">Pause</button>
+        <button id="frwd5">>></button>
+        <button id="bckwd5"><<</button>
+        <label for="speedSelect">Speed:</label>
+        <select id="speedSelect">
+            <option value="0.25">0.25x</option>
+            <option value="0.33">0.33x</option>
+            <option value="0.5">0.5x</option>
+            <option value="1" selected>1x</option>
+            <option value="1.5">1.5x</option>
+        </select>
+    </div>
+    <textarea id="editor"></textarea>
+    <button id="I" onclick="addPrefix('I: ')">I:</button>
+    <button id="P" onclick="addPrefix('P: ')">P:</button>
+    <button id="brackets" onclick="addBrackets()">[]</button>
+    <button id="getTime">Add Timestamp</button>
+    <div id="transcript"></div>
+
+    <script src="script.js">
+        
+    </script>
+
+</body>
+</html>
