@@ -3,6 +3,7 @@ const editor = document.getElementById("editor"),
 
 function addPrefix(e) {
     editor.value += e, updateTranscript(editor.value)
+    editor.focus()
 }
 
 function updateTranscript(e) {
