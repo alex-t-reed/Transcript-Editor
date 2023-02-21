@@ -1,5 +1,7 @@
 # Transcript Editor
----
+
+[Transcript Editor](https://alex-t-reed.github.io/transcripteditor)
+
 This is a transcript editor I used to make transcripts for participants as a research assistant.
 
 It bolds interviewer lines with question marks only if a timestamp is placed.
