@@ -27,7 +27,7 @@ function addBrackets() {
 
 editor.addEventListener("keydown", e => {
     if ("?" === e.key) {
-        editor.value.trim().split("\n").pop(), editor.value += prefix + " []\n";
+        editor.value.trim().split("\n").pop(), editor.value += prefix + " []\n", editor.focus();
         let t = editor.value.length - 2;
         editor.selectionStart = t, editor.selectionEnd = t, updateTranscript(editor.value), e.preventDefault()
     }
@@ -66,7 +66,7 @@ function formatTime(e) {
     return `${t}:${r}`
 }
 getTime.addEventListener("click", () => {
-    editor.value += "[" + formatTime(audioPlayer.currentTime) + "]", updateTranscript(editor.value)
+    editor.value += "[" + formatTime(audioPlayer.currentTime) + "]", updateTranscript(editor.value), editor.focus()
 }), localStorage.getItem("editorValue") && (editor.value = localStorage.getItem("editorValue"), updateTranscript(editor.value)), editor.addEventListener("input", e => {
     localStorage.setItem("editorValue", editor.value), updateTranscript(editor.value)
 });
