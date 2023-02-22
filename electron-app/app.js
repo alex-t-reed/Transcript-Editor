@@ -14,7 +14,6 @@ function createWindow() {
     win.loadFile('../index.html')
 
     const iconPath = path.join(__dirname, '../favicon.png');
-    console.log(iconPath)
     app.dock.setIcon(iconPath);
 }
 
