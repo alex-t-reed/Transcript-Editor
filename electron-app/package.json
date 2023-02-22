@@ -1,5 +1,5 @@
 {
-  "name": "Transcript-Editor",
+  "name": "transcripteditor",
   "version": "1.0.0",
   "description": "Simple transcript editor.",
   "main": "app.js",
@@ -8,17 +8,7 @@
   },
   "build": {
     "icon": "favicon.png",
-    "appId": "com.example.my-electron-app",
-    "mac": {
-      "icon": "favicon.png"
-    },
-    "win": {
-      "target": "nsis",
-      "icon": "favicon.ico"
-    },
-    "linux": {
-      "icon": "favicon.png"
-    }
+    "appId": "com.example.my-electron-app"
   },
   "repository": {
     "type": "git",
