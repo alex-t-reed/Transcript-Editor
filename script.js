@@ -11,10 +11,22 @@ function updateTranscript(e) {
         r = "";
     for (let a = 0; a < t.length; a++) {
         let i = t[a].trim();
-        i.startsWith("I:") && /\[\d{1,2}:\d{2}\]/.test(i) ? r += "<b>" + i + "</b><br><br>" : i.startsWith("I:") ? r += i + "<br><br>" : i.startsWith("P:") ? r += i + "<br><br>" : r += i
+        if (i.startsWith("I:") && /\[\d{1,2}:\d{2}\]/.test(i)) {
+          // allow <b> tags for bold formatting
+          r += "<b>" + i + "</b><br><br>";
+        } else if (i.startsWith("I:")) {
+          // strip any other HTML tags and allow only line breaks
+          r += i.replace(/(<([^>]+)>)/gi, "") + "<br><br>";
+        } else if (i.startsWith("P:")) {
+          // strip any other HTML tags and allow only line breaks
+          r += i.replace(/(<([^>]+)>)/gi, "") + "<br><br>";
+        } else {
+          // strip any other HTML tags and allow only line breaks
+          r += i.replace(/(<([^>]+)>)/gi, "");
+        }
     }
-    transcript.innerHTML = r
-}
+    transcript.innerHTML = r;
+  }
 
 function addBrackets() {
     let e = document.getElementById("editor"),
@@ -70,7 +82,7 @@ getTime.addEventListener("click", () => {
     let end = editor.selectionEnd
     let textTwo = editor.value.substring(editor.selectionEnd);
     let textOne = editor.value.substring(editor.selectionEnd, 0);
-    editor.value = textOne + "[" + formatTime(audioPlayer.currentTime) + "]" + textTwo, editor.setSelectionRange(end + 7, end + 7), updateTranscript(editor.value)
+    editor.value = textOne + "[" + formatTime(audioPlayer.currentTime) + "]" + textTwo, editor.setSelectionRange(end + 7, end + 7), updateTranscript(editor.value), editor.focus()
 }), localStorage.getItem("editorValue") && (editor.value = localStorage.getItem("editorValue"), updateTranscript(editor.value)), editor.addEventListener("input", e => {
     localStorage.setItem("editorValue", editor.value), updateTranscript(editor.value)
 });
