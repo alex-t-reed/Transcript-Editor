@@ -7,6 +7,7 @@
     "start": "electron app.js"
   },
   "build": {
+    "icon": "favicon.png",
     "appId": "com.example.my-electron-app",
     "mac": {
       "icon": "favicon.png"
