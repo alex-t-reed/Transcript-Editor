@@ -1,0 +1,25 @@
+{
+  "name": "electron-app",
+  "version": "1.0.0",
+  "description": "Simple transcript editor",
+  "main": "app.js",
+  "scripts": {
+    "start": "electron app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alex-t-reed/Transcript-Editor.git"
+  },
+  "keywords": [
+    "transcript",
+    "editor"
+  ],
+  "author": "Alex Reed",
+  "bugs": {
+    "url": "https://github.com/alex-t-reed/Transcript-Editor/issues"
+  },
+  "homepage": "https://github.com/alex-t-reed/Transcript-Editor#readme",
+  "devDependencies": {
+    "electron": "^23.1.0"
+  }
+}

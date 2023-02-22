@@ -67,10 +67,11 @@ function formatTime(e) {
 }
 getTime.addEventListener("click", () => {
     let start = editor.selectionStart
-    let end = editor.selectionEnd   
+    let end = editor.selectionEnd
     let textTwo = editor.value.substring(editor.selectionEnd);
     let textOne = editor.value.substring(editor.selectionEnd, 0);
-    editor.value = textOne + "[" + formatTime(audioPlayer.currentTime) + "]" + textTwo, editor.setSelectionRange(end + 7, end + 7),updateTranscript(editor.value)
+    editor.value = textOne + "[" + formatTime(audioPlayer.currentTime) + "]" + textTwo, editor.setSelectionRange(end + 7, end + 7), updateTranscript(editor.value)
 }), localStorage.getItem("editorValue") && (editor.value = localStorage.getItem("editorValue"), updateTranscript(editor.value)), editor.addEventListener("input", e => {
     localStorage.setItem("editorValue", editor.value), updateTranscript(editor.value)
 });
+
