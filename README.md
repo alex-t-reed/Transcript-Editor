@@ -4,7 +4,7 @@
 
 ## Overview
 
-Transcript Editor is a tool originally designed for creating transcripts for research purposes. It offers several features to facilitate the transcription process:
+Transcript Editor is a tool originally designed for creating transcripts for research purposes for the PADRES Lab at UCSB. It offers several features to facilitate the transcription process:
 
 - **Formatting**: The tool automatically makes interviewer lines bold when question marks are used in conjunction with timestamps.
 
