@@ -131,3 +131,4 @@ dist
 
 duplicate.py
 .DS_store
+.Rhistory
